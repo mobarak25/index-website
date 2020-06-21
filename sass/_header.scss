@@ -30,11 +30,12 @@
             transition-delay: 0.3s;
         }
     }
+    &:hover span{color: map-get($colors, brand);}
+    &:hover i{border-color:map-get($colors, brand);}
+    &:hover i::after{background-color:map-get($colors, brand);}
 }
 .menu-handel-out .menu-open i,
-.menu-handel-out .menu-open span{
-    transform: scale(0);
-}
+.menu-handel-out .menu-open span{transform: scale(0);}
 .site-menu{
     min-height: 100%;
     padding-bottom: 282px;
@@ -51,9 +52,7 @@
     visibility: visible;
     transform: scale(1) ;
 }
-.menu-top{
-    padding: 36px 42px 98px 58px;
-}
+.menu-top{padding: 36px 42px 98px 58px;}
 .menu-close{
     width: 60px;
     height: 50px;
@@ -84,9 +83,7 @@
         transform: translate(-50%, -50%) rotate(45deg) scale(1.2);
     }
 }
-.menu-mid{
-    padding: 36px 0 20px 58px;
-}
+.menu-mid{padding: 36px 0 20px 58px;}
 .menu-links{
     width: 522px;
     padding: 0;
@@ -101,17 +98,13 @@
                 position: relative;
                 @include transition(all, 400ms);
                 border-bottom: 1px solid lighten(map-get($colors, text-color), 30%);
-                &::after{
-                    @include sudo(0,1px,left,0,bottom,-1px,brand);
-                }
+                &::after{@include sudo(0,1px,left,0,bottom,-1px,brand);}
                 &:hover{
                     color: map-get($colors, brand);
                     padding-left: 5px;
                     border-color:map-get($colors, white-color);
                 }
-                &:hover::after{
-                    width: 100%;
-                }
+                &:hover::after{width: 100%;}
             }
         }
         li.active > a,
@@ -130,9 +123,7 @@
                 li{
                     padding: 0;
                     @include font(text-color, 18px, 26px, false);
-                    a{
-                        padding:5px 0 9px;
-                    }
+                    a{padding:5px 0 9px;}
                 }
             }
             i{
@@ -161,9 +152,7 @@
         text-transform: uppercase;
         @include font(text-color, 18px, 24px, false); 
     }
-    a{
-        @include font(text-color, 18px, 24px, false); 
-    }
+    a{ @include font(text-color, 18px, 24px, false);}
     i{
         @include absolute(false, false,left,0,top,29px);
         @include font(brand, 25px, 25px, false); 
@@ -182,32 +171,22 @@
             @include transition(all, 400ms);
             background: url($url + '/long-down-arrow.png') right center;
         }
-        &:hover i{
-            right: -7px;
-        }
+        &:hover i{right: -7px;}
     }
 }
-.menu-btm{
-    @include absolute(100%, false,left,0,bottom,0);
-}
+.menu-btm{ @include absolute(100%, false,left,0,bottom,0);}
 .menu-btm-top{
     padding: 0 0 18px;
     span{
         @include font(brand,20px, 30px, semi-bold);
         position: relative;
-        i{
-            display: block;
-        }
+        i{display: block;}
     }
 }
-.menu-slider{
-    margin: 0 -5px;
-}
+.menu-slider{margin: 0 -5px;}
 .menu-slider-box{
     padding: 0 5px;
-    &:focus{
-        outline: none;
-    }
+    &:focus{outline: none;}
 }
 .slideIn{
     cursor: pointer;
@@ -248,17 +227,12 @@
         }
     }
 
-    &:hover .cover{
-         transform: scale(1);
-    }
+    &:hover .cover{transform: scale(1);}
     &:hover h3{
          top: 50%;
          opacity: 1;
-        
     }
-    &:hover h3:after{
-        width: 100%
-   }
+    &:hover h3:after{width: 100%}
     &:hover i{
         top: 15%;
         left: 85%;

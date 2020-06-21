@@ -1,34 +1,36 @@
 .career-search{
 	padding: 0 0 114px;
 	margin: 0;
-	.career-search-box{
-		width:1010px;
-		input{
-			width: 100%;
-			padding: 16px 70px 12px 22px;
-			@include font(input-color,17px,22px, light);
-			@include border-radius(4px);
-			@include site-shadow();
-			border: 1px solid #e0dede;
-			font-family: 'Muli', sans-serif;
+}
+.career-search-box{
+	width:1010px;
+	input{
+		width: 100%;
+		padding: 16px 70px 12px 22px;
+		@include font(input-color,17px,22px, light);
+		@include border-radius(4px);
+		@include site-shadow();
+		border: 1px solid #e0dede;
+		font-family: 'Muli', sans-serif;
 
-			&:focus{outline: none;}
+		&:focus{outline: none;}
+	}
+	button{
+		cursor: pointer;
+		color: #e0e0e0;
+		font-size: 30px;
+		border: 0;
+		background-color: transparent;
+		@include absolute(false, false,right,15px,top,11px);
+
+		i{
+			@include transition(all, 400ms);
 		}
-		button{
-			cursor: pointer;
-			color: #e0e0e0;
-			font-size: 30px;
-			position: absolute;
-			right: 15px;
-			top: 10px;
-			border: 0;
-			background-color: transparent;
-			i{
-				@include transition(all, 400ms);
-			}
-			&:hover i{
-				color: map-get($colors, brand);
-			}
+		&:focus{
+			outline: 0;
+		}
+		&:hover i{
+			color: map-get($colors, brand);
 		}
 	}
 }
@@ -47,18 +49,14 @@
 		@include site-shadow();
 
 		.career-position-icon{
-			width: 64px;
-			height: 64px;
-			position: absolute;
-			left: 50%;
-			top: -32px;
-			background-color: map-get($colors, white-color);
 			transform: translateX(-50%);
 			@include border-radius(50%);
+			@include absolute(64px, 64px,left,50%,top,-32px);
+			background-color: map-get($colors, white-color);
 			@include box-shadow(0, 3px, 6px, 1px, map-get($colors, shadow-color));
 			i{
-				color: #a3a2a2;
-				font-size: 40px;
+				color: lighten(map-get($colors, text-color), 15%);
+				@include font(false, 40px, 40px, false);
 			}
 		}
 		h4{
@@ -71,6 +69,9 @@
 		}
 		&:hover{
 			border-color: map-get($colors, brand);
+		}
+		&:hover .career-position-icon i{
+			color: map-get($colors, brand);
 		}
 	}
 }

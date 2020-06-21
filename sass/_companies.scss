@@ -7,9 +7,7 @@
         @include absolute(false, false,right,70px,top,70px);
     }
 }
-.companies-logo{
-    padding-bottom: 70px;
-}
+.companies-logo{ padding-bottom: 70px;}
 .companies-desc{
     max-width: 830px;
     padding-bottom: 85px;
@@ -19,12 +17,8 @@
         @include font(false, 17px, 28px, false)
     }
 }
-.companies-project-wrap{
-    padding-bottom: 90px;
-}
-.companies-project{
-    position: relative;
-}
+.companies-project-wrap{padding-bottom: 90px;}
+.companies-project{position: relative;}
 .companies-project::after,
 .companies-project::before{
     content: '';
@@ -66,11 +60,9 @@
         @include font(brand, 18px, 28px, bold);
         @include transition(all, 400ms);
 
-        &:hover{
-            color: darken(map-get($colors, brand),15);
-        }
+        &:hover{color: darken(map-get($colors, brand),15);}
         &::after{
-            @include transition(all, 400ms)
+            @include transition(all, 400ms);
             @include sudo(100%, 1px, left, 0, bottom, 0, brand);
         }
         &:hover::after{
@@ -78,7 +70,6 @@
             opacity: 0;
         }
     }
-
 }
 .companies-project-box .companies-project-wrap:nth-child(2n) .companies-project-img{
     float: right;
@@ -97,19 +88,14 @@
             font-size: 30px;
             @include transition(all,100ms);
             @include absolute(false, false,left,-35px,bottom,-2px)
-
         }
 
-        &:hover{
-            color: map-get($colors, brand);
-        }
+        &:hover{color: map-get($colors, brand);}
         &:hover i{
             left: -50px;
             color: map-get($colors, brand);
         }
-        &:last-child:hover i{
-            right: -50px;
-        }
+        &:last-child:hover i{right: -50px;}
     }
     a:last-child i{
         left: auto;

@@ -120,22 +120,13 @@
 .home-btn .site-btn{
 	@include button-base(16px 88px 12px 48px);
 	i{
-		width: 29px;
-		height: 19px;
-		padding: 0;
-		margin: 0;
-		position: absolute;
-		right: 48px;
-		top: 22px;
+		@include absolute(29px, 19px, right, 48px, top, 22px);
 		background: url('#{$url}/long-right-arrow.png') no-repeat;
 	}
 }
 .index-right{
-	height: 100%;
-	position: absolute;
-	right: 48px;
-	top: 0;
 	display: flex;
+	@include absolute(false, 100%, right, 48px, top, 0);
 	div{
 		margin: auto;
 		a{
@@ -144,18 +135,13 @@
 			@include font(text-color, 22px, 30px, false);
 			@include transition(all, 400ms);
 
-			&:hover{
-				color: map-get($colors, brand);
-			}
+			&:hover{color: map-get($colors, brand);}
 		}
 	}
 }
 .scroll-down {
-	width: 116px;
 	color: #717171;
-	position: absolute;
-	left: -46px;
-	bottom: 220px;
+	@include absolute(116px, false, left, -46px, bottom, 220px);
 	@include transition(all, 400ms);
 	transform: rotate(90deg);
 	i {
