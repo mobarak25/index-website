@@ -10,7 +10,6 @@ jQuery(document).ready(function($){
         }
     );
 
-<<<<<<< HEAD:js/js.js
     $('.js-menu-open').click(function(){
       $('.header').addClass('menu-handel-out');
       $('.site-menu').addClass('active-menu');
@@ -20,11 +19,6 @@ jQuery(document).ready(function($){
       $('.header').removeClass('menu-handel-out');
       $('.site-menu').removeClass('active-menu')
     })
-=======
-    $(window).on('load',function(){
-        $('#exampleModalCenter').modal('show');
-    });
->>>>>>> 38736043c84f4b70e4aa2428ac5d2e7108e5091d:sass-project/js/js.js
 
     $('.js-menu-slider').slick({
         slidesToShow: 6,
